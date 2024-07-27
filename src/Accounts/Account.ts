@@ -38,6 +38,11 @@ export abstract class Account {
         console.log(this.balance);
     };
 
+    setBalance = (amount: number): void => {
+        this.balance += amount;
+        console.log(`Saldo atualizado com sucesso: ${this.balance}`)
+    }
+
     setName = (name: string): void => {
         this.name = name;
         console.log('Nome alterado com sucesso');
