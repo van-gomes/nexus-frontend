@@ -1,4 +1,8 @@
-const Card = () => {
+interface ICard {
+    id: number
+}
+
+const Card = ({ id }: ICard) => {
     return (
         <div>
             Card
