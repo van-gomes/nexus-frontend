@@ -3,7 +3,7 @@ import { Layout } from "./Layout";
 
 export const Login = () => {
     return (
-        <Layout>
+        <>
             <h1>Nexus</h1>
             <div>
                 <Label text="Email" htmlFor="email" />
@@ -12,6 +12,6 @@ export const Login = () => {
                 <input id="senha" type="password" />
                 <button>Entrar</button>
             </div>
-        </Layout>
+        </>
     );
 }
