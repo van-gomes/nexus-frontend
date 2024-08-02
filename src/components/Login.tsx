@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Label } from "./Label";
 import { 
     ChakraProvider,
@@ -7,6 +8,8 @@ import {
  } from "@chakra-ui/react";
 
 export const Login = () => {
+    const [email, setEmail] = useState('');
+    
     return (
         <>
             <ChakraProvider>
@@ -15,7 +18,10 @@ export const Login = () => {
                         <h1>Nexus</h1>
                         <div>
                             <Label text="Email" htmlFor="email" />
-                            <Input placeholder='email' />
+                            <Input
+                             placeholder='email'
+                             value={email}
+                             onChange={(event) => setEmail(event.target.value)} />
                             <input id="email" type="email" />
                             <Label text="Senha" htmlFor="username" />
                             <input id="senha" type="password" />
