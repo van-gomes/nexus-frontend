@@ -1,17 +1,29 @@
 import { Label } from "./Label";
-import { Layout } from "./Layout";
+import { 
+    ChakraProvider,
+    Center,
+    Input,
+    Box
+ } from "@chakra-ui/react";
 
 export const Login = () => {
     return (
         <>
-            <h1>Nexus</h1>
-            <div>
-                <Label text="Email" htmlFor="email" />
-                <input id="email" type="email" />
-                <Label text="Senha" htmlFor="username" />
-                <input id="senha" type="password" />
-                <button>Entrar</button>
-            </div>
+            <ChakraProvider>
+                <Box minHeight='100vh'>
+                    <Center>
+                        <h1>Nexus</h1>
+                        <div>
+                            <Label text="Email" htmlFor="email" />
+                            <Input placeholder='email' />
+                            <input id="email" type="email" />
+                            <Label text="Senha" htmlFor="username" />
+                            <input id="senha" type="password" />
+                            <button>Entrar</button>
+                        </div>
+                    </Center>
+                </Box>
+            </ChakraProvider>
         </>
     );
 }
