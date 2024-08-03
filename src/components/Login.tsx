@@ -24,7 +24,7 @@ export const Login = () => {
         }
 
         getData();
-    });
+    }, []);
 
     console.log(userData);
     
