@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Label } from "./Label";
 import { 
-    ChakraProvider,
     Center,
     Input,
     Box
@@ -30,8 +29,7 @@ export const Login = () => {
     
     return (
         <>
-            <ChakraProvider>
-                <Box minHeight='100vh'>
+            <Box minHeight='100vh'>
                     <Center>
                         <h1>Nexus</h1>
                         <div>
@@ -46,8 +44,7 @@ export const Login = () => {
                             <button>Entrar</button>
                         </div>
                     </Center>
-                </Box>
-            </ChakraProvider>
+            </Box>
         </>
     );
 }
