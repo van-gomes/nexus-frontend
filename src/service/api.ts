@@ -1,6 +1,7 @@
 import { resolve } from "path"
 
 const login = {
+    id: '1',
     name: 'Vânia Gomes',
     email: 'vaniagomes@gmail.com',
     password: '123456',
