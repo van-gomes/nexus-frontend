@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { Conta } from "./pages/Conta";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Layout } from "./components/Layout";
+import { DetalhesConta } from "./pages/DetalhesConta";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/conta/:id" element={<Conta />} />
+            <Route path="/detalhesconta" element={<DetalhesConta />} />
           </Routes>
         </Layout>
       </ChakraProvider>
