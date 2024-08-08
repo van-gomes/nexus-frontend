@@ -4,23 +4,7 @@ import { Conta } from "./pages/Conta";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Layout } from "./components/Layout";
 import { DetalhesConta } from "./pages/DetalhesConta";
-import { createContext } from "react";
-
-interface IAppContext {
-  user: string
-}
-
-export const AppContext = createContext({} as IAppContext);
-
-const AppContextProvider = ({ children }: any) => {
-  const user = 'Vânia';
-
-  return (
-    <AppContext.Provider value={{ user }}>
-      {children}
-    </AppContext.Provider>
-  );
-}
+import { AppContextProvider } from "./components/AppContext/AppContext";
 
 function App() {
   return (
