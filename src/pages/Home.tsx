@@ -2,25 +2,42 @@ import styled from "styled-components";
 import { Login } from "../components/Login";
 import { Center, Input } from "@chakra-ui/react";
 import { Label } from "../components/Label";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { login } from "../service/login";
+import { AppContext } from "../components/AppContext/AppContext";
+import { useNavigate } from "react-router-dom";
 
 // Create a Title component that'll render an <h1> tag with some styles
-const Title = styled.h1`
+const Title = styled.h1 `
   font-size: 1.5em;
   text-align: center;
   color: #BF4F74;
   background-color: blue;
 `;
 
+
 export const Home = () => {
     const [email, setEmail] = useState<string>('');
+    const { setIsLoggedIn } = useContext(AppContext);
+    const navigate = useNavigate();
+
+    const validateUser = async (email: string) => {
+        const loggedIn = await login(email);
+
+        if(!loggedIn) {
+            alert('Email inválido');
+        }
+
+        setIsLoggedIn(true);
+        navigate('/conta/1');
+    }
 
     return (
         <>
-             <Title>
-                Styled Components
-            </Title>
             <Login>
+                    <Title>
+                        Style components
+                    </Title>
                     <Center>
                         <h1>Nexus</h1>
                         <div>
@@ -32,7 +49,7 @@ export const Home = () => {
                             <input id="email" type="email" />
                             <Label text="Senha" htmlFor="username" />
                             <input id="senha" type="password" />
-                            <button>Entrar</button>
+                            <button onClick={() => validateUser(email)}>Entrar</button>
                         </div>
                     </Center>
             </Login>
