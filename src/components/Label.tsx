@@ -1,6 +1,6 @@
 interface ILabel{
-    text: string;
-    htmlFor: string;
+    text: string,
+    htmlFor: string,
 }
 
 export const Label = ({ text, htmlFor}: ILabel) => {

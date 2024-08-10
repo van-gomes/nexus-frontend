@@ -5,6 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Layout } from "./components/Layout";
 import { DetalhesConta } from "./pages/DetalhesConta";
 import { AppContextProvider } from "./components/AppContext/AppContext";
+import { MainRoutes } from "./routes";
 
 function App() {
   return (
@@ -12,11 +13,7 @@ function App() {
         <AppContextProvider>
           <ChakraProvider>
             <Layout>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/conta/:id" element={<Conta />} />
-                <Route path="/detalhesconta" element={<DetalhesConta />} />
-              </Routes>
+              <MainRoutes />
             </Layout>
           </ChakraProvider>
         </AppContextProvider>

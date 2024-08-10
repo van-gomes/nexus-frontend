@@ -6,10 +6,10 @@ import { CardInfo } from "../components/CardInfo";
 import { AppContext } from "../components/AppContext/AppContext";
 
 interface UserData {
-    id: string
-    name: string
-    email: string
-    password: string
+    id: string,
+    name: string,
+    email: string,
+    password: string,
     balance: number
  }
 
