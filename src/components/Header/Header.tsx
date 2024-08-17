@@ -14,20 +14,28 @@ export const Header = () => {
     }
 
     return (
-       <Flex>
-            <Box></Box>
-           {
-            isLoggedIn && (
-                <>
-                 <Spacer />
-                <Button
-                    onClick={() => logout()}
-                >
-                    Sair
-                </Button>
-                </>
-            )
-           }
-       </Flex>
+        <div className="container_header">
+            <img className="container_header__logo"
+             src="#" alt="Logo Banco Nexus" />
+            <h1 className="container_header__title"></h1>
+        </div>
+
+        /*
+        <Flex>
+                <Box></Box>
+            {
+                isLoggedIn && (
+                    <>
+                    <Spacer />
+                    <Button
+                        onClick={() => logout()}
+                    >
+                        Sair
+                    </Button>
+                    </>
+                )
+            }
+        </Flex>
+       */
     );
 }

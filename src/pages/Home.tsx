@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Login } from "../components/Login";
+import { Login } from "../components/Login/Login";
 import { Center, Input } from "@chakra-ui/react";
 import { Label } from "../components/Label";
 import { useContext, useState } from "react";
