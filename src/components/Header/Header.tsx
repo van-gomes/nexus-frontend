@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
-import "./Header/Header.css";
+import "../Header/Header.css";
 import { useContext } from "react";
 import { AppContext } from "../AppContext/AppContext";
 import { useNavigate } from "react-router-dom";
